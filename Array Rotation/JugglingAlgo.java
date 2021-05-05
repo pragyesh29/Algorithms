@@ -10,6 +10,8 @@ class MainClass{
 	private static void juggle(int[] arr, int k){
 		int n = arr.length;
 		// calculating hcf for array elements and number of rotations need to be performed.
+		// TO ROTATE RIGHT uncomment the following line
+		// k = n - k;
 		int hcf = gcd(n, k);
 		for(int i=0; i<hcf; i++){
 			int j = i;
@@ -30,7 +32,7 @@ class MainClass{
 		}
 	}
 	
-	// mathod to fill the data from user's input
+	// method to fill the data from user's input
 	private static void getArrInput(int[] arr){
 		for(int i=0; i<arr.length; i++){
 			arr[i] = sc.nextInt();
