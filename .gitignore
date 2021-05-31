@@ -1,0 +1,4 @@
+*.class
+/Permutations/test.java
+/Others/cppTemplate.cpp
+*.exe
