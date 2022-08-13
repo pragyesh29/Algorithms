@@ -1,4 +1,9 @@
 *.class
-/Permutations/test.java
-/Others/cppTemplate.cpp
 *.exe
+/Ignore
+/solve.cpp
+/atcodertmp.cpp
+/LeetCode
+/codeforces
+/.vscode
+/DP
