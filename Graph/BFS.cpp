@@ -1,5 +1,3 @@
-// i/p
-// o/p : 1 2 6 3 4 7 9 5 8
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -18,6 +16,7 @@ vector<int> BFS(vector<int> adj[], int n){
     vector<int> res;
     queue<int> q;
     vector<int> vis(n, 0);
+    // BFS is starting from node with value 1
     q.push(1);
     vis[1] = 1;
     while(!q.empty()){
