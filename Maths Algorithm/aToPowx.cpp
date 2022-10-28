@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//helper function to return string of binary form of given decimal number
 string toBinary(int n){
     string res = "";
     while(n){
@@ -10,7 +11,7 @@ string toBinary(int n){
     return res;
 }
 
-void solve(){
+int main(){
     int a, x;
     cin >> a >> x;
     string s = toBinary(x);
@@ -25,11 +26,4 @@ void solve(){
         }
     }
     cout << res;
-}
-
-int main(){
-    // int T; cin>>T;
-    // while(T--){
-        solve();
-    // }
 }

@@ -40,5 +40,5 @@ int main(){
     return 0;
 }
 
-// Time Complexity - O(2^n)
-// Space Complexity - O(2^n)
+// Time Complexity - O(n)
+// Space Complexity - O(2^n + n)
