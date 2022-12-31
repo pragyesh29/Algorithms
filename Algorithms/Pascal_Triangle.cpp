@@ -1,15 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#define SZ(x) ((int)(x.size()))
-#define FOR(i,n) for(int (i)=0;(i)<(n);(i)++)
-#define FOREACH(i,t) for (typeof(t.begin()) i=t.begin(); i!=t.end(); i++)
-#define REP(i,a,b) for(int (i)=(a);(i)<(b);++i)
-#define w(T) int T;cin>>T;while(T--)
-#define all(x) x.begin(),x.end()
-
-typedef long long ll;
-
 int main(){
     int n; cin>>n;
     vector<vector<int>> result;

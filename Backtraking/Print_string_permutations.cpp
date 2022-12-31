@@ -3,21 +3,33 @@ using namespace std;
 
 // Method to print all possible permutations of the given String.
 // This method does not check for the duplicate elements.
-// This metho uses backtracking to achieve the desired result.
-void permute(string s, int l, int r){
-    if(l == r) cout << s << '\n';
-    else{
-        for(int i = l; i <= r; i++){
-            swap(s[l], s[i]);
-            permute(s, l+1, r);
-            // backtrack
-            swap(s[l], s[i]);
+// This method uses backtracking to achieve the desired result.
+void permutation(string original, int currIndex, int size, unordered_set<string> &ds){
+    // BASE CASE
+    if(currIndex == size){
+        ds.emplace(original);
+        return;
+    }else{
+        for(int i = 0; i < size; i++){
+            swap(original[i], original[currIndex]);
+            permutation(original, currIndex + 1, size, ds);
+            swap(original[i], original[currIndex]);
         }
     }
 }
 
+// DRIVER
 int main(){
-    string s; cin >> s;
-    permute(s, 0, s.size()-1);
+    string s;
+    cout << "Enter string to permute : ";
+    cin >> s;
+    // Data structure to store the result
+    // Using unordered_set to print unique permutations
+    unordered_set<string> ds;
+
+    permute(s, 0, s.size());
+
+    // Print all the resultant permutations of the string
+    for(string i: ds) cout << i << " ";
     return 0;
 }
