@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// function to check if number is prime or not
 bool isPrime(int n){
     int c = 0;
     if(n % 2 == 0) c++;
@@ -16,6 +17,7 @@ bool isPrime(int n){
     return true;
 }
 
+// Driver function
 int main(){
     int n; cin >> n;
     vector<int> arr(n + 1, true);

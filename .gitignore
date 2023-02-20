@@ -1,8 +1,10 @@
 *.class
 *.exe
+*.class
 /Ignore
 /solve.cpp
 /atcodertmp.cpp
 /codeforces
 /.vscode
 /cp_stuff
+/removeexe.py
