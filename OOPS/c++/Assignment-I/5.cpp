@@ -32,7 +32,9 @@ void displayResultantComplexNumber(Complex &obj){
 
 int main(){
     Complex obj1(3);
+    displayResultantComplexNumber(obj1);
     Complex obj2(5, 2);
+    displayResultantComplexNumber(obj2);
     Complex res = addComplexNumber(obj1, obj2);
     displayResultantComplexNumber(res);
     return 0;

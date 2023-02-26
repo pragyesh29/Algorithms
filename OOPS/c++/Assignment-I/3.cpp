@@ -8,6 +8,7 @@ class Bank_Account{
     Bank_Account(string user_id, string password){
         this->user_id = user_id;
         this->password = password;
+        this->balance = 0;
     }
     bool authenticate(){
         if(user_id == credential_user_id){
@@ -27,7 +28,8 @@ class Bank_Account{
         double tmp;
         cout << "Enter the money to be withdrawn : ";
         cin >> tmp;
-        balance -= tmp;
+	    if(tmp > balance) cout << "Insufficient Balance\n";
+	    else balance -= tmp;
     }
     void depositMoney(){
         double tmp;
@@ -64,10 +66,7 @@ int main(){
                         obj.balance += tmp;
                         obj.displaybalance();
                         break;
-                case 2: cout << "Enter the amount to withdraw : ";
-                        cin >> tmp;
-                        obj.balance -= tmp;
-                        obj.displaybalance();
+                case 2: obj.withdrawMoney();
                         break;
                 case 3: obj.displaybalance();
                         break;

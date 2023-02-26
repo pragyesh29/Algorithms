@@ -1,0 +1,9 @@
+1) Product of upper triangular matrix A and Diagonal matrix B.
+2) Product of upper triangular matrix A and Lower triangular matrix B.
+3) Product of right triangular matrix A and square matrix B.
+4) Product of right lower triangular matrix A and left upper triangular matrix B.
+5) Product of left triangular matrix A and square matrix B.
+6) Determinant of Right Lower triangular matrix.
+7) Determinant of Left Lower triangular matrix.
+8) Inverse of Right Lower triangular matrix.
+9) Inverse of Left upper triangular matrix.

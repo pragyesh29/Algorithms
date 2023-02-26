@@ -19,7 +19,7 @@ class Time{
     }
     void display(){
         cout << "Resultant time\n";
-        cout << this->hour << "hours " << this->minute << "minutes\n";
+        cout << this->hour << " hours " << this->minute << " minutes\n";
     }
 };
 int main(){
