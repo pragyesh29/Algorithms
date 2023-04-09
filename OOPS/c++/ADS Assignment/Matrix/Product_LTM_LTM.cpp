@@ -14,7 +14,7 @@ void input(int **arr, int n){
 void printMatrix(int **arr, int n){
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
-            cout << ((j < i+1) ? arr[i][j] : 0);
+            cout << ((j <= i) ? arr[i][j] : 0);
             cout << " ";
         }
         cout << '\n';
@@ -27,11 +27,11 @@ int** mutipilcation_Of_LTM_With_LTM(int **first, int **second, int n){
         res[i] = new int[n];
         for(int j = 0; j < n; j++){
             res[i][j] = 0;
-            // if(j < i+1){
-            //     for(int k = 0; k < n; k++){
-            //         res[i][j] += (first[i][k] * second[k][j]);
-            //     }
-            // }
+            if(j <= i){
+                for(int k = j; k <= i; k++){
+                    res[i][j] += (first[i][k] * second[k][j]);
+                }
+            }
         }
     }
     return res;

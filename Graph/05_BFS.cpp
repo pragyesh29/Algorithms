@@ -34,7 +34,11 @@ vector<int> BFS(vector<int> adj[], int n){
 }
 
 int main(){
-    int n, m; cin >> n >> m;
+    int n, m;
+    cout << "Enter number of nodes : ";
+    cin >> n;
+    cout << "Enter number of edges : ";
+    cin >> m;
     vector<int> arr[n + 1];
     for(int i = 0; i < m; i++){
         int u, v; cin >> u >> v;

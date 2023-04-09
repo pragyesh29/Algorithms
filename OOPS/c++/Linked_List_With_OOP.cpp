@@ -27,6 +27,8 @@ class LinkedList{
     bool deleteFromList();
     void displayTheList();
     bool deleteList();
+    void reverseList();
+    void listLeftShift();
 };
 
 bool LinkedList :: insertIntoList(){
@@ -106,7 +108,39 @@ bool LinkedList :: deleteFromList(){
 bool LinkedList :: deleteList(){
     delete[] this->head;
     this->head = NULL;
+    this->size = 0;
     return true;
+}
+
+void LinkedList :: reverseList(){
+    Node* tmp = this->head;
+    Node* rev = NULL;
+    while(tmp){
+        Node* ptr = tmp;
+        tmp = tmp->next;
+        ptr->next = rev;
+        rev = ptr;
+    }
+    this->head = rev;
+}
+
+void LinkedList :: listLeftShift(){
+    cout << "Enter number of times list list to be rotated left : ";
+    int m; cin >> m;
+    int n = this->size;
+    m %= n;
+    Node* i = this->head;
+    for(; m > 1; m--){
+        i = i->next;
+    }
+    Node* ptr = i->next;
+    i->next = NULL;
+    Node* tmp = ptr;
+    while(tmp->next){
+        tmp = tmp->next;
+    }
+    tmp->next = this->head;
+    this->head = ptr;
 }
 
 int main(){
@@ -118,7 +152,9 @@ int main(){
         cout << "Press 3 to display linked list node\n";
         cout << "Press 4 to get size of linked list\n";
         cout << "Press 5 to delete the list \n";
-        cout << "Press 6 to terminate the program \n";
+        cout << "Press 6 to reverse the list\n";
+        cout << "Press 7 to left shift the list\n";
+        cout << "Press 10 to terminate the program \n";
         cout << "Enter choice : ";
         cin >> ch;
         switch(ch){
@@ -132,10 +168,13 @@ int main(){
                     break;
             case 4: cout << "Current size of list is : " << list.size << '\n';
                     break;
-            case 5: if(list.deleteList()){
-                        cout << "List deleted successfully!\n";
-                    }
+            case 5: if(list.deleteList()) cout << "List deleted successfully!\n";
                     break;
+            case 6: list.reverseList();
+                    break;
+            case 7: list.listLeftShift();
+                    break;
+            case 10: return 0;
         }
         system("pause");
         system("cls");
